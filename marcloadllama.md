@@ -81,7 +81,7 @@ from huggingface_hub import HfApi, HfFolder
 
 hf_api = HfApi(
     endpoint="https://huggingface.co", # Can be a Private Hub endpoint.
-    token="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", # Token is not persisted on the machine.
+    token="<Huggingface token>", # Token is not persisted on the machine.
 )
 folder = HfFolder()
 folder.save_token(token)
