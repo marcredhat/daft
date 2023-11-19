@@ -23,7 +23,7 @@ spec:
       - image: nvcr.io/nvidia/tritonserver:21.09-py3
         name: tritonserver
         command: ["/bin/bash"]
-        args: ["-c", "cp /var/run/secrets/kubernetes.io/serviceaccount/ca.crt /usr/local/share/ca-certificates && update-ca-certificates && /opt/tritonserver/bin/tritonserver --model-store=s3://https://minio.model-registry.svc.cluster.local:443/models/ --strict-model-config=false"]
+        args: ["-c", "cp /var/run/secrets/kubernetes.io/serviceaccount/ca.crt /usr/local/share/ca-certificates && update-ca-certificates && /opt/tritonserver/bin/tritonserver --model-store=s3://https://ip-10-20-0-72.us-west-2.compute.internal:9879 --strict-model-config=false"]
         env:
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
